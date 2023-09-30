@@ -1,6 +1,6 @@
 {
-    "name": "wildside/userstamps",
-    "description": "Laravel Userstamps provides an Eloquent trait which automatically maintains `created_by` and `updated_by` columns on your model, populated by the currently authenticated user in your application.",
+    "name": "phpfour/laravel-userstamps-for-backpack",
+    "description": "Laravel Userstamps provides an Eloquent trait which automatically maintains `created_by` and `updated_by` columns on your model, populated by the currently authenticated user in your application. This forks make that work for Backpack for Laravel.",
     "license": "MIT",
     "keywords": [
         "laravel",
@@ -8,18 +8,27 @@
         "userstamps",
         "created_by",
         "updated_by",
-        "deleted_by"
+        "deleted_by",
+        "Backpack", 
+        "Backpack for Laravel", 
+        "Addon"
     ],
     "authors": [
         {
             "name": "WILDSIDE",
             "email": "hello@wildside.uk",
             "homepage": "https://wildside.uk"
+        },
+        {
+            "name": "Mohammad Emran",
+            "email": "phpfour@gmail.com",
+            "homepage": "https://phpfour.com"
         }
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": "^5.2|^6.0|^7.0|^8.0|^9.0|^10.0"
+        "illuminate/support": "^5.2|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "backpack/crud": "^4.1.0|^5.0|^6.0"
     },
     "require-dev": {
         "illuminate/database": "^5.2|^6.0|^7.0|^8.0|^9.0|^10.0",

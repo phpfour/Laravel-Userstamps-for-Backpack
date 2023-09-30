@@ -9,7 +9,7 @@ class Deleting
     /**
      * When the model is being deleted.
      *
-     * @param  Illuminate\Database\Eloquent  $model
+     * @param  \Illuminate\Database\Eloquent\Model  $model
      * @return void
      */
     public function handle($model)
@@ -19,7 +19,7 @@ class Deleting
         }
 
         if (is_null($model->{$model->getDeletedByColumn()})) {
-            $model->{$model->getDeletedByColumn()} = Auth::id();
+            $model->{$model->getDeletedByColumn()} = backpack_auth()->id() || Auth::id();
         }
 
         $dispatcher = $model->getEventDispatcher();
