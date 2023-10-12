@@ -18,6 +18,6 @@ class Updating
             return;
         }
 
-        $model->{$model->getUpdatedByColumn()} = backpack_auth()->id() || Auth::id();
+        $model->{$model->getUpdatedByColumn()} = backpack_auth()->id() ?: Auth::id();
     }
 }
