@@ -14,10 +14,10 @@ class Updating
      */
     public function handle($model)
     {
-        if (! $model->isUserstamping() || is_null($model->getUpdatedByColumn()) || is_null(backpack_auth()->id() || Auth::id())) {
+        if (! $model->isUserstamping() || is_null($model->getUpdatedByColumn()) || is_null(backpack_auth()->id() ?: Auth::id())) {
             return;
         }
 
-        $model->{$model->getUpdatedByColumn()} = backpack_auth()->id() || Auth::id();
+        $model->{$model->getUpdatedByColumn()} = backpack_auth()->id() ?: Auth::id();
     }
 }

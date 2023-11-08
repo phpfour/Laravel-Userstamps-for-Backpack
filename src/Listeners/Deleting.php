@@ -19,7 +19,7 @@ class Deleting
         }
 
         if (is_null($model->{$model->getDeletedByColumn()})) {
-            $model->{$model->getDeletedByColumn()} = backpack_auth()->id() || Auth::id();
+            $model->{$model->getDeletedByColumn()} = backpack_auth()->id() ?? Auth::id();
         }
 
         $dispatcher = $model->getEventDispatcher();

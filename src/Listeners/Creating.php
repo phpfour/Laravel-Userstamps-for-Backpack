@@ -19,11 +19,11 @@ class Creating
         }
 
         if (is_null($model->{$model->getCreatedByColumn()})) {
-            $model->{$model->getCreatedByColumn()} = backpack_auth()->id() || Auth::id();
+            $model->{$model->getCreatedByColumn()} = backpack_auth()->id() ?: Auth::id();
         }
 
         if (is_null($model->{$model->getUpdatedByColumn()}) && ! is_null($model->getUpdatedByColumn())) {
-            $model->{$model->getUpdatedByColumn()} = backpack_auth()->id() || Auth::id();
+            $model->{$model->getUpdatedByColumn()} = backpack_auth()->id() ?: Auth::id();
         }
     }
 }
